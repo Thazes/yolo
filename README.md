@@ -21,3 +21,10 @@ Make sure that you have the following installed:
  `npm start`
 
  ### Go ahead a nd add a product (note that the price field only takes a numeric input)
+
+
+ ###Docker image urls
+
+ ![IP2_Docker_client_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/ip2_client_image.png" IP2_Docker_client_image")
+
+  ![IP2_Docker_backend_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/ip2_backend_image.png" IP2_Docker_backend_image")
