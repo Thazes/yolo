@@ -8,5 +8,12 @@ services:
     depends_on:
       - backend
     networks:
-      yolo-network:
-  
+      yolo_ip2_network:
+
+
+volumes:
+  mongo_data:
+
+  networks:
+  yolo_ip2_network:
+      driver: bridge
