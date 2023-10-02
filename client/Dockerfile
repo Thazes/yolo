@@ -1,13 +1,14 @@
 FROM node:13.12.0-alpine
 
-RUN mkdir -p /app
-
+# Create the app directory and set it as the working directory
 WORKDIR /app
 
-COPY package*.json /app/
+# Copy package.json and package-lock.json first and install dependencies
+COPY package*.json ./
+RUN npm install && npm cache clean --force
 
-RUN npm install
+# Copy the application code
+COPY . .
 
-COPY . /app/
-
+# Start the application
 CMD [ "npm", "start" ]
