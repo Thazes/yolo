@@ -25,6 +25,6 @@ Make sure that you have the following installed:
 
  ###Docker image urls
 
- ![IP2_Docker_client_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/ip2_client_image.png" IP2_Docker_client_image")
+ ![IP2_Docker_client_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/yolo_client_docker_image.png" IP2_Docker_client_image")
 
-  ![IP2_Docker_backend_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/ip2_backend_image.png" IP2_Docker_backend_image")
+  ![IP2_Docker_backend_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/yolo_backend_docker_image.png" IP2_Docker_backend_image")
