@@ -20,7 +20,15 @@ services:
     networks:
       - yolo_ip2_network
 
-  
+  database:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: yolo
+      MONGO_INITDB_ROOT_PASSWORD: yolo123
+    ports:
+      - 27017:27017
+    networks:
+      - yolo_ip2_network
 
 volumes:
   mongo_data:
