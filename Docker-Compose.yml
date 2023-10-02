@@ -9,22 +9,19 @@ services:
     networks:
       - yolo_ip2_network
 
-   backend:
+  backend:
     image: matagaro12/yolobackend_ip2:1.0.0
     depends_on:
       - database
     ports:
-     - 10000:10000
+      - 10000:10000
     environment: 
-     -MONGODB_URI=mongodb://mongodb:27017
+      - MONGODB_URI=mongodb://mongodb:27017
     networks:
       - yolo_ip2_network
 
   database:
     image: mongo
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: yolo
-      MONGO_INITDB_ROOT_PASSWORD: yolo123
     ports:
       - 27017:27017
     networks:
@@ -33,6 +30,6 @@ services:
 volumes:
   mongo_data:
 
-  networks:
+networks:
   yolo_ip2_network:
       driver: bridge
