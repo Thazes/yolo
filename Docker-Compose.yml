@@ -1,7 +1,8 @@
 version: '3'
 services:
   client:
-    image: matagaro12/yoloclient_ip2:v1.0.2
+    image: matagaro12/yoloclient_ip2:v1.0.0
+    stdin_open: true
     ports:
       - 8000:8000
     depends_on:
