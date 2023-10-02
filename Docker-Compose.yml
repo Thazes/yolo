@@ -4,12 +4,23 @@ services:
     image: matagaro12/yoloclient_ip2:1.0.0
     ports:
       - 8000:8000
-    stdin_open: true
     depends_on:
       - backend
     networks:
-      yolo_ip2_network:
+      - yolo_ip2_network
 
+   backend:
+    image: matagaro12/yolobackend_ip2:1.0.0
+    depends_on:
+      - database
+    ports:
+     - 10000:10000
+    environment: 
+     -MONGODB_URI=mongodb://mongodb:27017
+    networks:
+      - yolo_ip2_network
+
+  
 
 volumes:
   mongo_data:
