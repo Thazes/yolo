@@ -14,10 +14,10 @@ Unfortunately the size of mongo image was well over 600MB as there was no  more 
 
 The two images matagaro12/yoloclient_ip2  and matagaro12/yolobackend_ip2 were versioned to 1.0.3 and 1.0.1  respectively following the smever conventions. The versions were increased due to the need to optimise image sizes hence more verions were created.
 
-Below are the screenshot url links to the images dpeloyed on dockerhub
-![IP2_Docker_client_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/yolo_client_docker_image.png" IP2_Docker_client_image")
+Below are the screenshot url links to the images deployed on dockerhub
+ ![IP2_Docker_client_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/yolo_client_docker_image.png" IP2_Docker_client_image")
 
-![IP2_Docker_backend_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/yolo_backend_docker_image.png" IP2_Docker_backend_image")
+  ![IP2_Docker_backend_image](https://github.com/Thazes/yolo/blob/master/dockerhubimages/yolo_backend_docker_image.png" IP2_Docker_backend_image")
 
 # 3.Image Deployment
 The matagaro12/yoloclient_ip2 image and matagaro12/yolobackend_ip2 image were tagged with my username to enable upload to my Docker Hub repository. Mongo image was not tagged with my username and pushed to Docker Hub since the docker-compose file pulls it direclty from Docker Hub during running of the application.
