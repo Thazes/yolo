@@ -19,7 +19,7 @@
 
     - name: Install Docker
       include_role:
-        name: docker
+        name: install-docker
 
     - name: Install image and container for the applicaton
       include_role:
