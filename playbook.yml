@@ -9,4 +9,5 @@
 
   roles: 
     - roles/install-git
-    - roles/install-docker
+    - roles/install-docker   
+    - roles/docker-compose-tasks
