@@ -23,4 +23,4 @@
 
     - name: Install image and container for the applicaton
       include_role:
-        name: docker-compose
+        name: docker-compose-tasks
