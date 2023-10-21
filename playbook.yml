@@ -9,7 +9,7 @@
   tasks:
     - name: Install Git
       include_role:
-        name: git
+        name: install-git
     
     - name: checkout git repo
       git:
