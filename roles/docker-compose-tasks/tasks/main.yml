@@ -1,0 +1,7 @@
+---
+# tasks file for docker-compose-tasks
+- name: Run container
+  become: True
+  shell: docker-compose -f /home/matagaro/yolo/docker-compose.yml up --build -d
+  args:
+    executable: /bin/bash
