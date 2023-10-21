@@ -1,7 +1,57 @@
 ---
 # tasks file for docker-compose-tasks
 - name: Run container
-  become: True
-  shell: docker-compose -f /home/matagaro/yolo/docker-compose.yml up --build -d
-  args:
-    executable: /bin/bash
+  hosts: all
+  become: yes
+  become_method: sudo
+
+  tasks:
+  - name: Create a data container
+     docker_container:
+     name: mydata
+     image: busybox
+     tty: true
+     volumes:
+      - /data
+
+   - name: Create a network with custom IPAM config
+     docker_network:
+     name: yolo_network
+     state: present
+     attachable: true
+     ipam_config:
+      - subnet: 172.23.27.0/24
+        gateway: 172.23.27.2
+        iprange: 172.23.27.0/26
+
+   - name: Create db container and connect to network
+     docker_container:
+     name: mongodb
+     image: mongo
+     networks:
+     - name: yolo_network
+     ports: 
+     - '5001:5001'
+     volumes: 
+     - /data:/app/data
+
+
+   - name: Create backend container and connect to network
+     docker_container:
+     name: backend
+     image: matagaro12/yolobackend_ip2:v1.0.1
+     state: started
+     ports: 
+      - '5000:5000'
+     networks:
+      - name: yolo_network
+  
+   - name: Create backend container and connect to network
+     docker_container:
+     name: client
+     image: matagaro12/yoloclient_ip2:v1.0.3
+     state: started
+     ports: 
+      - '3000:3000'
+     networks:
+      - name: yolo_network
