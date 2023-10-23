@@ -1,7 +1,0 @@
----
-# tasks file for createVolume
-tasks:
-   - name: Create a volume
-     docker_container:
-     name: yolo-volume
-     state: present
