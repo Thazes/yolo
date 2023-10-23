@@ -1,0 +1,7 @@
+---
+# tasks file for createNetwork
+- name: Create a network with custom IPAM config
+  docker_network:
+   name: yolo_network
+   state: present
+   attachable: true

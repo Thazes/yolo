@@ -1,0 +1,13 @@
+---
+# tasks file for databaseconfiguration
+- name: Create db container and connect to networ
+  docker_container:
+    name: mongodb
+    image: mongo
+    state: started
+    ports:
+      - '27017:27017'
+    volumes:
+      - /data:/app/data
+    networks:
+      - name: yolo_network

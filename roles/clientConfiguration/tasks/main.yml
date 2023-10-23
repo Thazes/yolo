@@ -1,0 +1,11 @@
+---
+# tasks file for clientConfiguration
+- name: Create client container and connect to network
+  docker_container:
+   name: client
+   image: matagaro12/yoloclient_ip2:v1.0.3
+   state: started
+   ports: 
+    - '3000:3000'
+   networks:
+    - name: yolo_network

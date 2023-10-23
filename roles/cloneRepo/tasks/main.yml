@@ -1,0 +1,7 @@
+---
+# tasks file for cloneRepo
+- name: Clone Yolo from GitHub
+  git:
+        repo: https://github.com/Thazes/yolo
+        dest: /home/ubuntu/yolo
+        update: yes

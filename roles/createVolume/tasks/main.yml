@@ -1,0 +1,9 @@
+---
+- name: Data container
+  docker_container:
+    name: yolo-data-container
+    image: busybox
+    state: started
+    tty: true
+    volumes:
+      - /data # Mount an empty volume to /data in the busybox container
