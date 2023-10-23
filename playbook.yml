@@ -3,11 +3,12 @@
 - name: Yolo Playbook
   hosts: all
   become: true
-  vars:
-    repo: "https://github.com/Thazes/yolo.git"
-    dest: "/home/matagaro/yolo"
 
   roles: 
-    - roles/install-git
-    - roles/install-docker   
-    - roles/docker-compose-tasks
+    - roles/install-docker 
+    - roles/cloneRepo 
+    - roles/createVolume
+    - roles/createNetwork
+    - roles/databaseconfiguration
+    - roles/backendConfiguration
+    - roles/clientConfiguration
