@@ -4,11 +4,31 @@
   hosts: all
   become: true
 
-  roles: 
-    - roles/install-docker 
-    - roles/cloneRepo 
-    - roles/createVolume
-    - roles/createNetwork
-    - roles/databaseconfiguration
-    - roles/backendConfiguration
-    - roles/clientConfiguration
+  tasks:
+    - name: Include Install docker role
+      include_role:
+        name: roles/install-docker 
+
+    - name: Include Clone Repo Role
+      include_role:
+        name: roles/cloneRepo
+     
+    - name: Include Create volume role
+      include_role:
+        name: roles/createVolume
+
+    - name: Include Create network role
+      include_role:
+        name: roles/createNetwork
+
+    - name: Include databaseconfiguration role
+      include_role:
+        name: roles/databaseconfiguration
+
+    - name: Include backendConfiguration role
+      include_role:
+        name: roles/backendConfiguration
+
+    - name: Include clientConfiguration role
+      include_role:
+        name: roles/clientConfiguration
