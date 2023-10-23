@@ -9,3 +9,5 @@
      - '5000:5000'
     networks:
      - name: yolo_network
+    env:
+       MONGO_URI: 'mongodb://yolo-database-mongodb:27017'

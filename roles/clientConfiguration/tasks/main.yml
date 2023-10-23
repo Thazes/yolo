@@ -9,3 +9,5 @@
     - '3000:3000'
    networks:
     - name: yolo_network
+   env:      
+    stdin_open: 'true'
