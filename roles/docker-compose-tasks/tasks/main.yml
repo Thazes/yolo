@@ -1,12 +1,12 @@
 ---
 # tasks file for docker-compose-tasks
-- name: Run container
-  hosts: all
-  become: yes
-  become_method: sudo
+ - name: Run container
+   hosts: all
+   become: yes
+   become_method: sudo
 
-  tasks:
-  - name: Create a data container
+   tasks:
+   - name: Create a data container
      docker_container:
      name: mydata
      image: busybox
