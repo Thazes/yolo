@@ -1,0 +1,12 @@
+---
+# tasks file for automationDockerCompose
+- name: Set the working directory to the cloned folder
+  command: cd /home/ubuntu/yolo
+  args:
+        chdir: /home/ubuntu/yolo
+        creates: /home/ubuntu/yolo
+
+- name: Run Docker Compose
+  command: docker-compose up -d 
+  args:
+    chdir: /home/ubuntu/yolo  # Change the working directory to the cloned folder

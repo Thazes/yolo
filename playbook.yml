@@ -13,7 +13,7 @@
       include_role:
         name: roles/cloneRepo
      
-    - name: Include Create volume role
+    - name: Include automation role
       include_role:
         name: roles/automationDockerCompose
 
