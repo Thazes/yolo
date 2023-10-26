@@ -15,20 +15,5 @@
      
     - name: Include Create volume role
       include_role:
-        name: roles/createVolume
+        name: roles/automationDockerCompose
 
-    - name: Include Create network role
-      include_role:
-        name: roles/createNetwork
-
-    - name: Include databaseconfiguration role
-      include_role:
-        name: roles/databaseconfiguration
-
-    - name: Include backendConfiguration role
-      include_role:
-        name: roles/backendConfiguration
-
-    - name: Include clientConfiguration role
-      include_role:
-        name: roles/clientConfiguration
