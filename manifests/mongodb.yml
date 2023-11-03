@@ -39,7 +39,6 @@ spec:
       targetPort: 27017
   selector:
       app: mongodb-service
-  type: LoadBalancer
 
 ---
 apiVersion: v1
