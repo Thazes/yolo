@@ -17,10 +17,6 @@ spec:
       containers:
       - name: yolo-backend
         image: matagaro12/yolobackend_ip2:v1.0.1
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         env:
         - name: MONGO_URI
           value: "mongodb://mongodb:27017"

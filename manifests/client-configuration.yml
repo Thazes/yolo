@@ -17,10 +17,6 @@ spec:
       containers:
       - name: yolo-client
         image: matagaro12/yoloclient_ip2:v1.0.3
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 3000
 
