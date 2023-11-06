@@ -19,6 +19,11 @@ spec:
         image: matagaro12/yoloclient_ip2:v1.0.3
         ports:
         - containerPort: 3000
+        env:
+            - name: CLIENT_HOST
+              value: "backend"
+            - name: CLIENT_PORT
+              value: "10000"
 
 
 ---
